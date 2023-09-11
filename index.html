@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lakhan portfolio </title>
+    <script src="https://kit.fontawesome.com/5febb4c3cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="main-header">
+    <div id="header">
+        <div class="nav">
+            <img src="logo23.png" class="logo">
+            <ul class="list" >
+                <li> <a href="#header">Home</a></li>
+                <li> <a href="#about">About</a></li>
+                <li> <a href="#services_section">Services</a></li>
+                <li> <a href="#portfolio">portfolio</a></li>
+                <li> <a href="#contactme">contacts</a></li>
+                <i class="fa-solid fa-xmark" onclick="closem()" ></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openm()"></i>
+            <!-- this should be outside ul because menu bar appers always but ul and wrong symbol appear only when clicked on menu -->
+       </div>
+       <div class="header-text">
+        <p>Full stack .NET Developer</p>
+        <h1>Hi,I'm <span>Lakhan</span> <br> From India</h1>
+       </div>
+    </div>
+    <!-- -----------about me----------- -->
+    <div id="about">
+    <div class="about-me">
+        <div class="left-column">
+            <img src="BackgroundEraser_20221225_072024914.jpg" >
+        </div>     
+        
+        <div class="right-column">
+            <h1>About me</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error suscipit iste distinctio amet ad dolores qui eum est perspiciatis temporibus, esse illo aliquam facilis molestias nulla neque libero alias quibusdam!</p>
+            <div class="titles">
+                <p class="knowledge_heading active-skill" onclick="opentab('skill_call')">skills</p>
+                 <!-- opentab function hoisting  we give id of list of skills we have as parameter to fuction call opentab,giving id tag as parameter to function while calling when onclick clicked clicked-->
+                 <!-- onclick attributes that call the opentab function with the corresponding ID of the content to display when clicked. For example, clicking the "skills" tab will call opentab('skill_call'), which will display the skills content. -->
+                <p class="knowledge_heading"                      onclick="opentab('experience_call')">experience</p>
+                <p class="knowledge_heading"                       onclick="opentab('education_call')" >education</p>
+            </div> 
+            
+            <div class="knowledge-content active-knowledge" id="skill_call">
+                <!-- when clicked in skills it will call function in which we gave id="skill_call" so it returns skills content -->
+                <ul>
+                    <li><span>UI/UX</span><br>Desining web interfaces </li>
+                    <li><span>web Development </span> <br>web app development fweeded</li>
+                    <li><span>.net Development</span> <br>build fullstack webapp sdfwewd</li>
+                </ul>
+            </div>
+            <div class="knowledge-content" id="experience_call">
+                <ul>
+                    <li><span>NARESH IT</span><br>full stack internship  fwewewweqw</li>
+                    <li><span>BUILD personal projects </span> <br>web app development fwefewedw</li>
+                    <li><span>.net</span> <br>build fullstack webapps weewewew</li>
+                </ul>
+            </div>
+            <div class="knowledge-content" id="education_call">
+                <ul>
+                    <li><span>Bsc.cs</span><br>osmania university wewqewqwqdw </li>
+                    <li><span>web Development </span> <br>web app development weweewq</li>
+                    <li><span>.net Development</span> <br>build fullstack webapps weweeeqqweqe</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ </div>
+ <!-- ----------------services--------------- -->
+ <div id="services_section">
+    <h1 >My services</h1>
+    <div class="all_sections">
+        <div class="sections">
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Lorem ipsum i rem similique reiciendis officiis ea laudantium nostrum culpa dolores placeat et laborum vel dicta corporis?</p>
+            <a href="">Learn more</a>
+        </div>
+        <div class="sections">
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>UI/UX Design</h2>
+            <p>Lorem animi rem similique reiciendis officiis ea laudantium nostrum culpa dolores placeat et laborum vel dicta corporis?</p>
+            <a href="">Learn more</a>
+        </div>
+        <div class="sections">
+            <i class="fa-brands fa-google-play"></i>
+            <h2>App Design</h2>
+            <p>Lorem ipsum dolor sit amet  c laborum vel dicta corpori c laborum vel dicta corporis?</p>
+            <a href="">Learn more</a>
+        </div>
+
+    </div>
+ </div>
+
+<!-- ---------------------portfolio-------------  -->
+<div id="portfolio">
+    <h1 >My work</h1>
+    <div class="all_work">
+        <div class="work">
+            <img src="work-1.png" >
+            <div class="work_hoist">
+                <h2>Amazon</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt unde amet esse assumenda non, ut inventore vitae! Numquam, saepe a! Modi incidunt quaerat quae praesentium delectus mollitia esse, quibusdam accusamus!</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="work-2.png" >
+            <div class="work_hoist">
+                <h2>Youtube</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt unde amet esse assumenda non, ut inventore vitae! Numquam, saepe a! Modi incidunt quaerat quae praesentium delectus mollitia esse, quibusdam accusamus!</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <div class="work">
+            <img src="work-3.png" >
+            <div class="work_hoist">
+                <h2>Whats app</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt unde amet esse assumenda non, ut inventore vitae! Numquam, saepe a! Modi incidunt quaerat quae praesentium delectus mollitia esse, quibusdam accusamus!</p>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+        <!-- <div class="btn"><button></button></div> -->
+        
+    </div>
+    <a href="#" class="btn">Learn more</a>
+</div>
+<!-- -----------------CONTACT ME--------------- -->
+<div id="contactme">
+    <div class="contact_container">
+        <div class="my_contact_details">
+            <h1>Contact me</h1>
+            <!-- somethin happend with h1 debung this -->
+            <p><i class="fa-solid fa-paper-plane"></i>lakhan.munnur@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+91-6301243416</p>
+            <a href="https://www.linkedin.com/in/lakhan-munnur-440556b7/" target="_blank" style="text-decoration: none; color: black; display: flex; align-items: center; ">
+                <i class="fa-brands fa-linkedin"></i>
+                <span style="margin-left: 5px;">MY linkedin profile</span>
+            </a>
+              
+            <!-- <a href="https://www.linkedin.com/in/lakhan-munnur-440556b7/" target="_blank"  style="text-decoration: none; color: black;  " ><i class="fa-brands fa-linkedin"></i> <span  >MY linkedin profile</span></a> -->
+           <!-- <a href="https://www.facebook.com/profile.php?id=100004368797733" target="_blank"><i class="fa-brands fa-facebook"></i></a> 
+           <a href="https://twitter.com/Lakhan92921972" target="_blank"><i class="fa-brands fa-square-twitter"></i></a> 
+           <a href="https://www.instagram.com/lakhan.munnur2020/" target="_blank"> <i class="fa-brands fa-instagram"></i></a> -->
+           <div><a href="Simple-Fresher-Resume-Format.docx" download class="btn btn2"  > Download CV</a></div>
+        </div>
+        <div class="input_contact">
+            <form action="" method="" name="submit-to-google-sheet">
+                <input type="text" placeholder="Your Name" name="name">
+                <!-- name: This attribute specifies the name of the input control. It is used to identify the input when the form is submitted, and its value is sent to the server. -->
+                <input type="email" placeholder="Your Email" name="email">
+                <textarea type="text" placeholder="Your Messages" name="message" rows="6"></textarea>
+                <button type="submit" class=" btn btn2">Submit</button>
+            </form> 
+             <span id="msg"></span>           
+        </div> 
+        
+    </div>
+         
+
+</div>
+<div class="copyright">
+    <p>Copyright © Lakhan. Made with <i class="fa-solid fa-heart"></i>  by Lakhan </p>
+</div>
+<script>
+    var tablinks=document.getElementsByClassName("knowledge_heading");
+    // selection of html section in which thiis class present which ever class it may be
+    // this select skills,education ,expericece
+    var tabcontent=document.getElementsByClassName("knowledge-content");
+    // this select skills,education ,expericece content below them
+    //Here, you're selecting all elements with the class name "knowledge_heading" and "knowledge-content". The tablinks represent the clickable headings for the different sections (skills, experience, education), and tabcontent represents the content of those sections.
+
+    function opentab(funcpar)
+    {
+        //This function is triggered when a tab heading is clicked. It takes a parameter funcpar, which should be the ID of the tab's content (id="skill_call") you want to display
+        for(tablink of tablinks)
+      {
+       
+        tablink.classList.remove("active-skill")
+         // on what ever heading you click it got id of their own but remove active skill under line omly because if we remove active skill class form class list the underline probertity used in css wont work so it is removed
+        
+      }
+      for(tabcont of tabcontent )
+      {
+        tabcont.classList.remove("active-knowledge")
+        // here if we remove active knowledge from class it will hide skills content because css propertiy added to it that is display block will be removed 
+      }
+         // till here it only remove contenk when clicked it is 
+        // working in such a way that when we click  on any one it will call function opentab than 
+        // statments inside will be exixuted
+        event.currentTarget.classList.add("active-skill")
+        // this will add under line(since we have defined it in css here we actually add to what ever evet has occuted to that class list) only on which ever option we click
+        var addcontent=document.getElementById(funcpar);
+
+         addcontent.classList.add("active-knowledge")
+        //Finally, it adds the class "active-knowledge" to the tab content associated with the funcpar ID. This makes the content of the clicked tab visible.
+         //Finally, it adds the class "active-knowledge" to the tab content associated with the funcpar ID. This makes the content of the clicked tab visible.
+    }
+  
+</script>
+<!-- -----------script for menu bar -------- -->
+<script>
+//   var menucontent = document.getElementsByClassName("list");
+//   function openm()
+//   {
+//     menucontent.style.right="0";
+//   }
+//   function closem()
+//   {
+//     menucontent.style.right="-150px";
+//   }
+
+// we can use both id as well as class selector but   when use  use getElementsByClassName 
+// it will return multiple elements saperatly so we have to un loop till end but when we use getElementById
+// it returns single element with unique id 
+
+// getElementsByClassName:
+// Returns: It returns a live HTMLCollection (a collection of elements) containing all
+// -- elements with the specified class name in the document.
+// getElementById:
+// Returns: It returns a reference to the element with the specified ID. Since --
+//-- IDs must be unique in an HTML document, this method returns a single element.
+// In this updated code, we use a for loop to iterate through all the elements with the class 
+// "list" and apply the style changes individually to each element. This way, your functions will correctly open and close each element with the "list" class.
+
+var menucontent = document.getElementsByClassName("list");
+
+function openm() {
+  for (var i = 0; i < menucontent.length; i++)
+  {
+    menucontent[i].style.right = "0";
+  }
+}
+
+function closem() {
+  for (var i = 0; i < menucontent.length; i++)
+  {
+    menucontent[i].style.right = "-150px";
+  }
+}
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzfdeeKJFTQZ-WmA51Bwt8Revi-ykCv73ouasFba7UosM29DMwodiDUgVYWWgon-34t/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>

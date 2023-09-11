@@ -1,0 +1,657 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+#header
+{
+   width: 100%;
+   height: 100vh; /* why? */
+   background-image: url(BACKGROUND.jpg);
+   background-size: cover;
+   background-position: top 20%; 
+   background-size: cover;
+   background-attachment: fixed;
+   padding: 20px 10%;
+   
+}
+html {
+    scroll-behavior: smooth; 
+    /* used to move smoothly to particular section */
+}
+
+.main-header  
+{
+    background-color: #D9D9D9;
+}
+    
+
+.nav
+{
+   height: 10vh;
+    width: 100%;
+    background-color:none;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nav ul li{
+    display: inline-block;
+    /* make horizontal align because has inline behaviour  */
+    list-style: none;
+    margin: 10px 20px;
+}
+
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Display list items horizontally */
+/* .list 
+{
+    /* display: inline-block; */
+    /* display: flex; */
+      /* we can use inline-block directly it will make horizontally and give space btw automatically */
+    /* gap: 20px; */
+    /* flex-wrap: wrap; */
+    
+/* } */ 
+.list li:last-child {
+    margin-right: 20px;
+}
+
+.logo{
+    height:10vh;
+    width:auto;
+    margin-left:0;
+}
+.list li a{
+    text-decoration: none;
+    /* This line removes the underline that is usually below links. */
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    position: relative;
+    /* This line helps with positioning the elements that come after the links. */
+}
+.list li a::after
+{
+    /* even work with before but if we add content at appear before */
+    content: '';
+      /* The content property is used with the ::before and ::after pseudo-elements, to insert generated content. */
+    width:0;
+    /* Creating a line of height 3 pixels */
+    height: 3px;
+    /* This line sets the height of the drawn content to create an underline effect. */
+    background:#ff004f;
+    left:0;
+    /* This line positions the drawn content from the left edge of the link. */
+    bottom:-6px;
+    /* This line positions the drawn content right at the bottom of the link. */
+    position: absolute;
+    /* This line helps with positioning the drawn content. */
+     transition: 0.3s;
+}
+.list li a:hover:after
+{
+    width: 100%;
+}
+.header-text{
+    margin-top:20%;
+    font-size: 30px;
+}
+
+.header-text h1
+{
+    margin-top:20px;
+    font-size: 60px;
+}
+.header-text span
+{
+    color: #3A547B;
+}
+
+
+/* ---------------------about-me------------------------- */
+.about-me
+{
+    display: flex;
+    justify-content: space-between; 
+    /* give space btw right and left column */
+    
+}
+.left-column img
+{
+  width:35%;
+ 
+}
+.right-column
+{
+    width:65%;
+}
+.about-me{
+    padding: 10px 7%;
+}
+#services_section
+{
+
+    padding: 10px 7%;
+}
+#portfolio{
+    padding: 10px 7%;
+}
+#contactme
+{
+    padding: 10px 7%;
+}
+
+.left-column
+{
+   width: 35%;
+   /* implies left column is just 60% */
+}
+
+.right-column{
+    width:60%;
+   /* implies right column is just 60% */
+}
+.left-column img
+{
+   width:100%;
+   /* this means image is covered total 35%space */
+   border-radius: 15px;
+}
+.titles 
+{
+   display: flex;
+   margin: 20px 0 40px;
+   /* 20px form top  0 from left and right 40 from bottom */
+   gap: 50px;
+   font-size: 18px;
+   cursor: pointer;
+   font-weight: 600;
+   flex-wrap: wrap;
+   
+    /* we want to add/{added}  underline thats why */
+}
+.titles p
+{
+    position:relative;
+    /* .titles>p::after will add line under p only */
+}
+
+.titles p::after
+{
+  content:'';
+  width:0;
+  /* we add after hover */
+  height: 3px;
+  background: #ff004f;
+  left:0;
+  bottom:-8px;
+  transition: 0.5s;
+  position: absolute;
+  
+}
+.knowledge_heading.active-skill::after
+{
+width: 50%;
+/* just add 50% underline below skills */
+}
+.knowledge-content ul li
+{
+    list-style:none;
+    margin:10px 0px;
+}
+
+.knowledge-content ul li span{
+    color:#c90342;
+    font-size:14px
+}
+.knowledge-content
+{
+    display: none;
+    /* hide all 3  about me */
+}
+.knowledge-content.active-knowledge
+{
+    display: block;
+    /* only show active knowledge */
+    
+} 
+
+/* -----------------servives-------------- */
+#services_section{
+    background-color: #D9D9D9;
+}
+.all_sections
+{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    /* auto-fit: This value indicates that the grid should automatically adjust the number of columns to fit within the available space in the grid container. It tries to fill as many columns as it can while ensuring they fit. */
+    /*1fr: This represents a flexible fraction unit of the available space. It allows the column to expand and fill any remaining space in a balanced manner.  */
+    /* For example, let's say you want to create a grid with three columns, each having a width of 100px. Instead of writing grid-template-columns: 100px 100px 100px;, you can use the repeat() function: grid-template-columns: repeat(3, 100px); */
+    gap: 40px;
+    margin-top: 50px;
+    
+}
+.sections{
+    background-color:#a19c9c97 ;
+    border-radius: 10px;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    transition: background 0.5s, transform 0.5s;
+    /* if we give 5 sec backgorund transition it will change color after 5 sec */
+    /* if we give 5 sec transform it will move up after 5 sec only */
+}
+.sections h2
+{
+    color:#0b2450;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    
+}
+.sections a
+{
+ text-decoration: none;
+ color:#c90342;
+ font-size: 12px;
+ margin-top: 20px;
+ display: inline-block;
+ /* add default margins & padding of span */
+}
+.sections i
+{
+  font-size: 50px;
+  margin-bottom:30px ;
+  color: #c90342;
+}
+
+.sections:hover
+{
+    background-color:#647690;
+    transform: translateY(-20px);
+    /* what is the uuse of this? */
+ 
+}
+/* ----------------portfolio------------ */
+
+#portfolio
+{
+    background-color: #D9D9D9;
+}
+/* h1
+{
+   padding-top:30px ;
+   padding-left: 30px;
+} */
+.all_work
+{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    /* auto-fit: This value indicates that the grid should automatically adjust the number of columns to fit within the available space in the grid container. It tries to fill as many columns as it can while ensuring they fit. */
+    /*1fr: This represents a flexible fraction unit of the available space. It allows the column to expand and fill any remaining space in a balanced manner.  */
+    /* For example, let's say you want to create a grid with three columns, each having a width of 100px. Instead of writing grid-template-columns: 100px 100px 100px;, you can use the repeat() function: grid-template-columns: repeat(3, 100px); */
+    gap: 40px;
+    margin-top: 50px;
+}
+.work
+{
+    border-radius: 15px;
+    /* position:relative;*/
+    overflow: hidden;
+    /* it is used because we are adding 2 cointainer 1 is image and another is rising(layer) div which is after image both have same size and = to work cointainer */
+    /* just hide (not remove)  the height of all sections  */
+    position: relative;
+    /* we add position absolute on above comming layer */
+}
+.work img
+{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+.work h2
+{
+    color:#d1daea;
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 20px;
+ 
+}
+.work_hoist
+{
+    /* height: 100%; */
+    height: 0;
+    /* height should be 0 other wise it will not be 0 it will have some size */
+    /* we will add height only after hover */
+    width: 100%;
+    /* =to height and width of work cointainer */
+    /* so this cause over flow form container */
+    /*why*/
+    background: linear-gradient(rgba(0,0,0,0.6) ,#ff004f);
+    /* not background color: ; */
+    border-radius: 15px;
+    position: absolute;
+    /* position: absolute;: This rule positions the .work_hoist element absolutely within its containing parent element.  */
+    left: 0;
+    bottom: 0;
+    /* top: 0; */
+    /* it would be aligned to the bottom-left corner of the parent. */
+    overflow: hidden;
+     /* causing over flow even after height =0 so this will remove */
+    /* color: aliceblue; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 40px;
+    text-align: center;
+    /* it apply center property for all lines saperatly , center text only*/
+    font-size: 13px;
+    transition: height 1s;
+    /* // increase work_hoist height in 0.5 sec */
+
+}
+.work_hoist a 
+{
+    height: 60px;
+    width: 60px; 
+    border-radius: 50%;
+    margin-top: 20px;
+  
+    /* color: #c90342; */
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;  */
+    /* text-align: center; */
+    line-height: 60px;
+    /* this is making icon vertically center */
+    /* The purpose of the line-height property in this context is to ensure that the text inside the anchor elements is centered vertically within those elements */
+}
+/* .work_hoist:hover{
+    height: 100%;}
+ */
+ /* it will add height only if we move on work hoist but is is not there if their below it will */
+ .work:hover .work_hoist
+{
+     /* space is must after hover */ 
+     height: 100%;
+     /* height of work hoist */
+   
+}
+.btn
+{
+    display: block;
+    /* if removed overlap on previous text/div */
+    /* it will take up the full width of its container and start on a new line. */
+    margin: 0px auto;
+    /* This sets the element's margin to 0 pixels on the top and bottom and automatically centers it horizontally within its container. The auto value for the horizontal margin centers the element. */
+    margin-top: 40px;
+    width: fit-content;
+    width: fit-content;
+
+    /* The fit-content value sets the element's width to the minimum required to contain its content without overflowing or expanding beyond its content */
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color:black;
+    transition: background 0.5s;
+}
+.btn:hover
+{
+    background:#ff004f;
+}
+/* --------------------contact--------------- */
+
+#contactme{
+    background-color: #D9D9D9;
+}
+.contact_container
+{
+   
+    display: flex;
+    /* justify-content: space-between; */
+}
+/* .my_contact_details
+{
+     width: 50%; 
+ } */
+.my_contact_details
+{
+    flex-basis: 35%;
+   
+}
+.input_contact
+{
+    flex-basis: 70%; 
+}
+/* .my_contact_details, h1, p, i
+{
+    /* margin:5px 0px; */
+    /* padding: 10px; */
+    /* padding-top: 20px; */
+    /* margin: 10px 0px; */
+/* } */ 
+.my_contact_details p
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.my_contact_details p i{
+    font-size: 25px;
+    margin-right: 15px;
+    /* margin-bottom: 10px; */
+    color: #ff004f;
+    
+}
+.my_contact_details a i
+{
+   
+   font-size: 50px;
+   text-decoration: none;
+   color: #0A66C2;
+}
+.btn2{
+    display: inline-block;
+    /* if we applly online it will over lap on above content */
+    /* already it is blocklevel element */
+    /* background-color: #ff004f;
+    border-color: #f6135b; */
+}
+/* .Download   dont do this use already create dbn class and create one more extra btn class and apply inline block
+{
+    
+    /* display: block; */
+    /* if removed overlap on previous text/div */
+    /* it will take up the full width of its container and start on a new line. */
+    /* margin: 0px auto; */
+    /* This sets the element's margin to 0 pixels on the top and bottom and automatically centers it horizontally within its container. The auto value for the horizontal margin centers the element. */
+    /* margin-top: 40px;
+    width: fit-content; */
+    /* width: fit-content; */
+
+    /* The fit-content value sets the element's width to the minimum required to contain its content without overflowing or expanding beyond its content */
+    /* border: 1px solid #ff004f;
+    padding: 10px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    color:black;
+    transition: background 0.5s; */
+/* } */ 
+/* ------input-styling------------------ */
+
+
+
+/* input{
+    padding: 10px;
+    margin: 5px;
+} */
+
+
+/* .input_contact
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* margin: 0px 10px; 
+
+} */
+/* .message
+{class of message no need use roe 6 it will be responsive well
+    padding-bottom: 80px;
+} */
+
+form input, form textarea
+{
+    width: 100%;
+    border: 0;
+    outline: none;
+    /* dark border appera when clcked on input box */
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    /* cursor color */
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+form .btn2
+{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor:pointer;
+    background-color: #D9D9D9;
+}
+.copyright
+{
+    /* width: 100%; */
+    text-align: center;
+    background-color: #262626;
+    padding: 25px 0;
+    font-weight: 300;
+    /* margin-top: 20px; */
+    color: #fff;
+
+}
+.copyright i
+{
+    color: #ff004f;
+}
+/* -------------css for small screens------ */
+.nav .fa-solid
+{
+    display:none;
+}
+@media only screen and (max-width:600px)
+{
+    #header{
+        background-image: url(phonebackground.jpg);
+    }
+    .header-text{
+        margin-top:105%;
+        font-size: 20px;
+        color: rgb(7, 5, 16);
+    }
+ 
+    .header-text h1{
+        
+        font-size: 40px;
+    }
+    .header-text span
+      {
+         color: #ff004f ;
+      }
+    .nav .fa-solid
+    {
+    display:block;
+    font-size: 25px;
+    }
+    .nav ul
+    {
+        background: #ff004f;
+        position: fixed;
+        /* fixed, the element is removed from the normal document flow and is positioned relative to the viewport. It means that the element will stay in the same position on the screen, even if you scroll the page. */
+        top: 0;
+        /* makes top and bottom space 0 */
+        right: -150px;
+        /* it will bush to right by 150 pix because nav width is 150px */
+        /* when clicked on menu it will again become 0 */
+        /* right: 0; */
+        /* makes right margin 0 */
+        width: 150px;
+        /* give width to nav container */
+        height: 100vh;
+        /* makes nav container 100% of viewing screen */
+        padding-top: 50px;
+        /* create padding from top to text in nav container */
+        z-index: 1;
+        transition: right 0.5s;
+    }
+    .nav ul li
+    {
+        display: block;
+        /* show hidden text */
+        margin: 25px;
+    }
+    .nav ul .fa-solid
+    {
+        position: absolute;
+        /* no we can position relative to nav container which is also positiond other than static */
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    /* ---about me----- */
+    .left-column
+    {
+        /* flex-basis: 100%; */
+         width: 100%; 
+         margin-bottom: 20px;
+
+    }
+    .right-column
+    {
+        width: 100%;
+    }
+    .about-me
+    {
+        display: block;
+    }
+    .contact_container
+    {
+        display: block;
+    }
+    /* .my_contact_details
+    {
+        flex-basis: 100%; 
+    }
+    .input_contact{
+        flex-basis: 100%; 
+    } */
+
+
+}
+#msg
+{
+    color: #61b752; 
+    display: inline-block;
+    margin: 20px;
+}
